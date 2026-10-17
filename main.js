@@ -58,7 +58,7 @@
   // ---------- edit mode: open the page with ?edit ----------
   if (!/[?&]edit\b/.test(location.search)) return;
   editing = true;
-  var SEL = 'h1, h2, h3, h4, p, li, dt, dd, summary, .nm, .btn, .tabs button, .top__role, .chips li, .fix s, .fix b';
+  var SEL = 'h1, h2, h3, h4, p, li, dt, dd, summary, .nm, .btn, .tabs button, .top__role, .chips li, .fix s, .fix b, figcaption b, .who, .cost th, .cost td';
   var wasOpen = [];
   document.querySelectorAll('details').forEach(function (d) { wasOpen.push(d.open); d.open = true; });
   document.querySelectorAll('[role="tabpanel"]').forEach(function (p) { p.hidden = false; });

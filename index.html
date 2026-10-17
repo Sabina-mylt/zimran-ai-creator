@@ -19,6 +19,7 @@
       <a href="#film">Ролик</a>
       <a href="#process">Как делала</a>
       <a href="#analysis">Анализ креативов</a>
+      <a href="#extra">Масштабирование</a>
     </nav>
   </div>
 </header>
@@ -277,6 +278,80 @@
 
 </section>
 
+
+<!-- Extra -->
+<section class="extra wrap" id="extra" aria-labelledby="extra-title">
+  <p class="kicker">Extra · масштабирование</p>
+  <h2 id="extra-title">Как сделать ×100 роликов из одного</h2>
+  <p class="section-lead">Ролик собирается из модулей: хук, боль, провал, решение, результат, призыв. Модули генерируются один раз и хранятся в библиотеке, а новые ролики собираются из комбинаций. Генерировать заново нужно только то, чего в библиотеке ещё нет.</p>
+
+  <h3 class="sub">Схема системы</h3>
+  <ol class="flow">
+    <li><h4>Матрица брифов</h4><p>Таблица: ниша × боль × хук × длина × рынок. Одна строка — один будущий ролик.</p><span class="who who--auto">Авто + ручное</span></li>
+    <li><h4>Фабрика промптов</h4><p>LLM заполняет шаблоны промптов из строки матрицы, сверяясь с «библией»: листы персонажей, локации, голоса, стиль.</p><span class="who who--auto">Авто</span></li>
+    <li><h4>Библиотека модулей</h4><p>Каждый готовый план помечен ролью: хук, боль, провал, Coursiv, монтаж, результат, CTA. Перед генерацией система ищет, что уже есть.</p><span class="who who--auto">Авто</span></li>
+    <li><h4>Генерация недостающего</h4><p>Только новые планы: стартовый кадр → видео через API пачками. Закадр — одним голосом персонажа.</p><span class="who who--mix">Авто, отбор вручную</span></li>
+    <li><h4>Сборка</h4><p>Скрипт склеивает модули по строке матрицы: цвет по LUT, шаблоны графики с данными ниши, автосубтитры, громкость −14 LUFS.</p><span class="who who--auto">Авто</span></li>
+    <li><h4>Контроль качества</h4><p>Автопроверки (суммы и Coursiv в субтитрах, громкость, длина, чёрные кадры, чужие логотипы), потом человек смотрит первые 3 секунды и лица.</p><span class="who who--mix">Авто + человек</span></li>
+    <li><h4>Запуск и обучение</h4><p>Ролики уходят в рекламу, метрики (досмотр 3 с, CTR, цена заявки) возвращаются в матрицу: слабые хуки отключаются, сильные получают новые вариации.</p><span class="who who--auto">Авто</span></li>
+  </ol>
+  <p class="flow__loop">↺ Шаг 7 замыкается на шаг 1: каждая новая партия роликов строится на данных прошлой.</p>
+
+  <h3 class="sub">Демо: 8 вариаций из моего ролика</h3>
+  <p class="note">Собраны скриптом из модулей Reyes Lawn Care без новой генерации, 360p, без субтитров и музыки. Меняются хук, угол боли, длина и порядок.</p>
+  <div class="vars">
+    <figure><video src="assets/variants/v1_hook-65.mp4" poster="assets/variants/v1_hook-65.webp" controls preload="none" playsinline></video><figcaption><b>Хук «$65»</b>Обесценивание труда · 34 с</figcaption></figure>
+    <figure><video src="assets/variants/v2_hook-son.mp4" poster="assets/variants/v2_hook-son.webp" controls preload="none" playsinline></video><figcaption><b>Хук «сын стесняется»</b>Семья · 41 с</figcaption></figure>
+    <figure><video src="assets/variants/v3_hook-580.mp4" poster="assets/variants/v3_hook-580.webp" controls preload="none" playsinline></video><figcaption><b>Хук «$580 → 2 звонка»</b>Слитый бюджет · 22 с</figcaption></figure>
+    <figure><video src="assets/variants/v4_result.mp4" poster="assets/variants/v4_result.webp" controls preload="none" playsinline></video><figcaption><b>Результат в начале</b>«Запись на 6 недель» · 25 с</figcaption></figure>
+    <figure><video src="assets/variants/v5_15s.mp4" poster="assets/variants/v5_15s.webp" controls preload="none" playsinline></video><figcaption><b>Только продукт</b>Для ретаргетинга · 15 с</figcaption></figure>
+    <figure><video src="assets/variants/v6_60s-story.mp4" poster="assets/variants/v6_60s-story.webp" controls preload="none" playsinline></video><figcaption><b>Короткая история</b>Вся арка за минуту · 60 с</figcaption></figure>
+    <figure><video src="assets/variants/v7_neighbor.mp4" poster="assets/variants/v7_neighbor.webp" controls preload="none" playsinline></video><figcaption><b>Хук «сосед»</b>Совет от равного · 34 с</figcaption></figure>
+    <figure><video src="assets/variants/v8_money.mp4" poster="assets/variants/v8_money.webp" controls preload="none" playsinline></video><figcaption><b>Хук «сколько в этом месяце?»</b>Деньги в семье · 32 с</figcaption></figure>
+  </div>
+
+  <div class="cols cols--2 extra__grid">
+    <div class="col col--change">
+      <h4>Слабые места моего процесса</h4>
+      <div class="rows">
+        <details class="row"><summary>Диалог двух героев в одном плане</summary><div class="row__b"><p>Модель путает реплики и меняет лица. Решение для системы: один говорящий на план, диалог собирается монтажом из восьмёрки.</p></div></details>
+        <details class="row"><summary>Голос плывёт от клипа к клипу</summary><div class="row__b"><p>Каждая генерация даёт немного другой голос. Решение: закадр и ключевые реплики — отдельно, одним голосом персонажа.</p></div></details>
+        <details class="row"><summary>Ручные исправления</summary><div class="row__b"><p>Чужие логотипы, нечитаемые вывески и лишние предметы я убирала вручную. В системе это автоматический детектор логотипов и текста плюс список запретов в промптах.</p></div></details>
+        <details class="row"><summary>Лимит генерации</summary><div class="row__b"><p>234 секунды на весь ролик заставляли сразу попадать в кадр. На потоке нужен бюджет с запасом на перегенерацию примерно в 2–3 раза.</p></div></details>
+      </div>
+    </div>
+    <div class="col col--keep">
+      <h4>Авто и ручное</h4>
+      <div class="rows">
+        <details class="row"><summary>Автоматизировать</summary><div class="row__b"><p>Промпты из матрицы, поиск по библиотеке, пакетная генерация, сборка по шаблону, цвет, графика с данными ниши, субтитры, громкость, автопроверки, отчёт по метрикам.</p></div></details>
+        <details class="row"><summary>Оставить людям</summary><div class="row__b"><p>Сценарная «библия» и новые хуки, отбор удачных дублей, финальный просмотр первых 3 секунд и лиц, культурная проверка для каждого рынка (как с флористкой и кейтерингом).</p></div></details>
+      </div>
+    </div>
+    <div class="col col--boost">
+      <h4>Как не сделать 100 одинаковых роликов</h4>
+      <div class="rows">
+        <details class="row"><summary>Комбинаторика модулей</summary><div class="row__b"><p>6 хуков × 4 угла боли × 3 призыва × 3 длины = 216 сборок из одной истории. Плюс смена ниши: газоны, уборка, кейтеринг, ремонт.</p></div></details>
+        <details class="row"><summary>Правила разнообразия</summary><div class="row__b"><p>Два ролика в одной партии не могут совпадать по первым 3 секундам и призыву. Похожесть первых кадров сверяется автоматически.</p></div></details>
+        <details class="row"><summary>Разные герои под разные рынки</summary><div class="row__b"><p>Отдельная «библия» персонажей на рынок: для США — Виктор и Гектор, для Франции — своя флористка, без копирования типажей.</p></div></details>
+      </div>
+    </div>
+    <div class="col col--keep">
+      <h4>Цена и контроль качества</h4>
+      <div class="rows">
+        <details class="row"><summary>Сколько стоит один ролик</summary><div class="row__b">
+          <table class="cost">
+            <tr><th>Тип ролика</th><td>Генерация</td><td>Человек</td></tr>
+            <tr><th>Новая история (как Reyes)</th><td>≈ $80–90</td><td>15–20 ч</td></tr>
+            <tr><th>Новая ниша на готовой схеме</th><td>≈ $12–15</td><td>≈ 1 ч</td></tr>
+            <tr><th>Перемонтаж из модулей</th><td>$0</td><td>5–10 мин</td></tr>
+          </table>
+          <p>Если в партии из 100 роликов 60 перемонтажей, 30 с новыми хуками и 10 новых ниш, генерация обходится примерно в $3 за ролик. Расчёт по цене Veo 3.1 Fast ($0,10 за секунду в 720p) с запасом ×2,5 на перегенерацию.</p></div></details>
+        <details class="row"><summary>Как контролировать качество</summary><div class="row__b"><p>Чек-лист из ТЗ превращается в автотесты: написание Coursiv и сумм, громкость, нет обрывов звука, нет чёрных кадров. Человек смотрит только то, что машина не оценит: лица, движения, первые 3 секунды.</p></div></details>
+      </div>
+    </div>
+  </div>
+  <p class="sources">Цена генерации: <a href="https://benchlm.ai/media-pricing/veo" target="_blank" rel="noopener">BenchLM, тарифы Veo 3.1 (октябрь 2026)</a>.</p>
+</section>
 
 </main>
 

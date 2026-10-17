@@ -262,3 +262,30 @@ h4 { font-size: 18px; letter-spacing: -0.01em; margin: 28px 0 10px; }
 }
 .editbar p { margin: 0; flex: 1 1 260px; font-size: 14px; color: var(--muted); }
 .editbar .btn { padding: 10px 16px; font-size: 14px; }
+
+/* extra */
+.extra { padding: 72px 0 80px; border-top: 1px solid var(--line); }
+.sub { font-size: clamp(22px, 2.4vw, 28px); margin: 44px 0 18px; }
+.flow { list-style: none; counter-reset: f; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.flow li { counter-increment: f; position: relative; padding: 46px 16px 16px; border-radius: var(--radius-s); border: 1px solid var(--line); background: var(--card); display: flex; flex-direction: column; }
+.flow li::before { content: counter(f); position: absolute; top: 12px; left: 16px; font-weight: 800; font-size: 22px; color: var(--violet); }
+.flow h4 { margin: 0 0 6px; font-size: 17px; letter-spacing: -0.01em; }
+.flow p { margin: 0 0 12px; font-size: 14px; line-height: 1.45; color: #d8d1fb; flex: 1; }
+.who { align-self: flex-start; font-size: 12px; padding: 3px 9px; border-radius: 999px; }
+.who--auto { background: rgba(66, 227, 154, 0.14); color: var(--mint); }
+.who--mix { background: rgba(255, 204, 102, 0.14); color: #ffd27a; }
+.flow__loop { margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+.vars { display: grid; grid-template-columns: repeat(8, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 1100px) { .vars { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 860px) { .flow { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .flow { grid-template-columns: 1fr; } .vars { grid-template-columns: repeat(2, 1fr); } }
+.vars figure { margin: 0; }
+.vars video { width: 100%; aspect-ratio: 9 / 16; border-radius: 14px; background: #000; border: 1px solid var(--line); display: block; }
+.vars figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.35; }
+.vars figcaption b { display: block; color: var(--ink); font-size: 14px; font-weight: 600; }
+.extra__grid { margin-top: 48px; gap: 28px; }
+.cost { width: 100%; border-collapse: collapse; font-size: 14px; margin: 4px 0 10px; }
+.cost th, .cost td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.cost tr:first-child th, .cost tr:first-child td { color: var(--muted); font-weight: 500; font-size: 13px; }
+.cost th { font-weight: 600; color: var(--ink); }
+@media (max-width: 560px) { .top__nav a:nth-child(4) { display: none; } }
