@@ -94,6 +94,24 @@
     doc.querySelectorAll('details').forEach(function (d, i) { if (wasOpen[i]) d.setAttribute('open', ''); else d.removeAttribute('open'); });
     doc.querySelectorAll('[role="tabpanel"]').forEach(function (p, i) { if (i === 0) p.removeAttribute('hidden'); else p.setAttribute('hidden', ''); });
     doc.querySelectorAll('[aria-current]').forEach(function (el) { el.removeAttribute('aria-current'); });
+    // strip anything browser extensions injected (ChatGPT, Sider, Grammarly etc.)
+    doc.querySelectorAll('*').forEach(function (el) {
+      if (el.tagName.indexOf('-') !== -1) el.remove();
+    });
+    doc.querySelectorAll('script').forEach(function (el) { if (el.getAttribute('src') !== 'main.js') el.remove(); });
+    doc.querySelectorAll('style, iframe, object, embed').forEach(function (el) { el.remove(); });
+    doc.querySelectorAll('link').forEach(function (el) {
+      var h = el.getAttribute('href') || '';
+      if (h !== 'style.css' && h.indexOf('fonts.g') === -1) el.remove();
+    });
+    [doc, doc.querySelector('body')].forEach(function (el) {
+      Array.prototype.slice.call(el.attributes).forEach(function (a) {
+        if (a.name !== 'lang') el.removeAttribute(a.name);
+      });
+    });
+    doc.querySelectorAll('[data-gpts-theme], [data-ext-text-inserter], [data-gramm], [data-new-gr-c-s-check-loaded]').forEach(function (el) {
+      ['data-gpts-theme', 'data-ext-text-inserter', 'data-gramm', 'data-new-gr-c-s-check-loaded', 'data-gr-ext-installed'].forEach(function (n) { el.removeAttribute(n); });
+    });
     var html = '<!doctype html>\n' + doc.outerHTML;
     var a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
