@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sabina Myltykbay — AI Creator</title>
+<meta name="description" content="Тестовое задание на роль AI Creator: драма-реклама Reyes Lawn Care для Coursiv и анализ двух креативов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="top__me" href="#top"><span class="me-name">Sabina Myltykbay</span><span class="top__role">AI Creator, тестовое задание</span></a>
+    <nav class="top__nav" aria-label="Разделы">
+      <a href="#film">Ролик</a>
+      <a href="#process">Как делала</a>
+      <a href="#analysis">Анализ креативов</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO: the film itself -->
+<section class="hero wrap" id="film" aria-labelledby="film-title">
+  <div class="hero__text">
+    <p class="kicker">Часть 2 · генерация ролика</p>
+    <h1 id="film-title">Reyes<br>Lawn Care</h1>
+    <p class="lead">Драма-реклама Coursiv для рынка США. Виктор девятнадцать лет стрижёт газоны, клиентов становится всё меньше, а сын стесняется сказать, чем занимается отец. Сосед Гектор показывает ему, как запустить рекламу за $20 в месяц.</p>
+    <dl class="facts">
+      <div><dt>Длительность</dt><dd>3:48</dd></div>
+      <div><dt>Формат</dt><dd>9:16, 1080×1920</dd></div>
+      <div><dt>Сцены</dt><dd>1A–9 и заставка</dd></div>
+    </dl>
+    <div class="actions">
+      <button class="btn btn--main" type="button" data-play>Смотреть ролик</button>
+      <a class="btn btn--ghost" href="#analysis">Анализ креативов</a>
+    </div>
+  </div>
+
+  <figure class="phone">
+    <video id="player" controls playsinline preload="metadata" poster="assets/poster.jpg">
+      <source src="assets/reyes-lawn-care.mp4" type="video/mp4">
+    </video>
+  </figure>
+</section>
+
+<!-- Storyboard strip: drives the player -->
+<section class="strip" aria-labelledby="strip-title">
+  <div class="wrap strip__head">
+    <h2 id="strip-title">Раскадровка</h2>
+    <p>Нажмите на кадр, чтобы перейти к сцене в ролике.</p>
+  </div>
+  <ol class="strip__list" id="strip">
+    <li><button type="button" data-t="0"><img src="assets/scenes/s01.webp" alt="" loading="lazy"><span class="sc">1A</span><span class="nm">Последний двор, $65</span><span class="tc">0:00</span></button></li>
+    <li><button type="button" data-t="28"><img src="assets/scenes/s02.webp" alt="" loading="lazy"><span class="sc">1B</span><span class="nm">Парковка: «Чем он занимается?»</span><span class="tc">0:28</span></button></li>
+    <li><button type="button" data-t="45"><img src="assets/scenes/s03.webp" alt="" loading="lazy"><span class="sc">2</span><span class="nm">Дорога домой</span><span class="tc">0:45</span></button></li>
+    <li><button type="button" data-t="69"><img src="assets/scenes/s04.webp" alt="" loading="lazy"><span class="sc">3</span><span class="nm">Кухня: сколько в этом месяце</span><span class="tc">1:09</span></button></li>
+    <li><button type="button" data-t="82"><img src="assets/scenes/s05.webp" alt="" loading="lazy"><span class="sc">3</span><span class="nm">$580 на рекламу, два звонка</span><span class="tc">1:22</span></button></li>
+    <li><button type="button" data-t="90"><img src="assets/scenes/s06.webp" alt="" loading="lazy"><span class="sc">4</span><span class="nm">Утро: идти к Гектору</span><span class="tc">1:30</span></button></li>
+    <li><button type="button" data-t="116"><img src="assets/scenes/s07.webp" alt="" loading="lazy"><span class="sc">5</span><span class="nm">Крыльцо Гектора</span><span class="tc">1:56</span></button></li>
+    <li><button type="button" data-t="131"><img src="assets/scenes/s08.webp" alt="" loading="lazy"><span class="sc">6</span><span class="nm">«Ты запускал рекламу?»</span><span class="tc">2:11</span></button></li>
+    <li><button type="button" data-t="159"><img src="assets/scenes/s09.webp" alt="" loading="lazy"><span class="sc">6</span><span class="nm">Coursiv: одно фото</span><span class="tc">2:39</span></button></li>
+    <li><button type="button" data-t="182"><img src="assets/scenes/s10.webp" alt="" loading="lazy"><span class="sc">7</span><span class="nm">28 дней</span><span class="tc">3:02</span></button></li>
+    <li><button type="button" data-t="201"><img src="assets/scenes/s11.webp" alt="" loading="lazy"><span class="sc">8</span><span class="nm">Два месяца спустя</span><span class="tc">3:21</span></button></li>
+    <li><button type="button" data-t="217"><img src="assets/scenes/s12.webp" alt="" loading="lazy"><span class="sc">9</span><span class="nm">Кивок через улицу</span><span class="tc">3:37</span></button></li>
+    <li><button type="button" data-t="224"><img src="assets/scenes/s13.webp" alt="" loading="lazy"><span class="sc">—</span><span class="nm">Заставка</span><span class="tc">3:44</span></button></li>
+  </ol>
+</section>
+
+<!-- Process -->
+<section class="process wrap" id="process" aria-labelledby="process-title">
+  <h2 id="process-title">Как делала ролик</h2>
+  <p class="section-lead">Весь ролик собран из ИИ-генераций. Главное ограничение платформы — 234 секунды видео на всё, поэтому каждую сцену я планировала до генерации, а слабые места потом перегенерировала отдельно.</p>
+
+  <ol class="steps">
+    <li>
+      <h3>Персонажи и локации</h3>
+      <p>Листы персонажей (анфас, профиль, полный рост) для семи героев и девять локаций в Nano Banana 2. Эти кадры стали стартовыми для всех сцен, поэтому лица и одежда не плывут от плана к плану.</p>
+    </li>
+    <li>
+      <h3>Генерация сцен</h3>
+      <p>Gemini Omni Flash на платформе Prosperi: стартовый кадр и промпт на каждый план, клипы по 3–10 секунд. Бюджет в 234 секунды распределила по сценам заранее, а сценарий местами сократила — это согласовано с координатором.</p>
+    </li>
+    <li>
+      <h3>Перегенерация слабых мест</h3>
+      <p>В Google Flow (Omni 1.1 Flash) заново сделала сцену 8 и заменила стоп-кадры живыми планами. Рабочий приём: первое фото — точный стартовый кадр, второе и третье — лица героев.</p>
+    </li>
+    <li>
+      <h3>Закадровый голос</h3>
+      <p>Все четыре закадра Виктора озвучены одним голосом персонажа во Flow, чтобы голос совпадал во всех сценах.</p>
+    </li>
+    <li>
+      <h3>Монтаж и графика</h3>
+      <p>Цвет выровнен по группам сцен (день и ночь, улица и дом) и сведён в общий грейд. Убраны чужие логотипы: вывеска конкурента, Apple, Nike, Ford. Графика нарисована под сюжет: Ads Manager с $580, экран Coursiv, отсчёт DAY 1 → 28, уведомления о заказах, заставка точно по тексту ТЗ.</p>
+    </li>
+    <li>
+      <h3>Звук и субтитры</h3>
+      <p>Реплики выровнены по громкости, фон под сценами ровный и без повторяющихся голосов, музыка входит и уходит плавно. Субтитры вычитаны вручную, итоговая громкость −14 LUFS — стандарт для соцсетей.</p>
+    </li>
+  </ol>
+
+  <div class="check">
+    <h3>Требования ТЗ</h3>
+    <ul>
+      <li><b>Consistency.</b> Одни и те же листы персонажей и стартовые кадры во всех сценах, один голос Виктора на все закадры.</li>
+      <li><b>Монтаж и звук.</b> Нет резких обрывов: фон тянется через склейки, музыка с плавными входами и выходами.</li>
+      <li><b>Разные герои.</b> У каждого свой возраст, телосложение и одежда: Виктор в кепке и зелёной футболке, Гектор в тёмно-синем поло, Матео в худи.</li>
+      <li><b>Субтитры.</b> Проверены Coursiv, $65, $580, $20 и $1,400.</li>
+    </ul>
+    <p class="check__note">Сверх ТЗ: внизу кадра весь ролик идёт пометка «AI-generated video · Dramatization», чтобы зритель не принял постановку за реальную историю.</p>
+  </div>
+</section>
+
+<!-- Part 1 -->
+<section class="analysis wrap" id="analysis" aria-labelledby="analysis-title">
+  <p class="kicker">Часть 1 · анализ креативов</p>
+  <h2 id="analysis-title">Два ролика Coursiv: флористка и кейтеринг</h2>
+  <p class="section-lead">Короткий вывод по каждому ролику, а детали — в пунктах, которые раскрываются по нажатию.</p>
+
+  <div class="tabs" role="tablist" aria-label="Креативы">
+    <button role="tab" id="tab-florist" aria-controls="panel-florist" aria-selected="true" type="button">Флористка<span>Франция</span></button>
+    <button role="tab" id="tab-catering" aria-controls="panel-catering" aria-selected="false" tabindex="-1" type="button">Кейтеринг<span>США</span></button>
+  </div>
+
+  <!-- ============ FLORIST ============ -->
+  <article class="panel" role="tabpanel" id="panel-florist" aria-labelledby="tab-florist">
+    <header class="cr">
+      <img class="cr__cover" src="assets/creative-florist.webp" alt="Кадр из ролика: флористка в своей лавке" loading="lazy">
+      <div class="cr__text">
+        <p class="fit fit--mid">Подходит Франции частично</p>
+        <p class="cr__verdict">Идея ложится на Францию, исполнение подводит: ошибки во французском, английская заставка и «американская» героиня выдают адаптацию.</p>
+        <ul class="chips"><li>2:10</li><li>9:16</li><li>Анимация «валяная шерсть»</li><li>Французский закадр</li></ul>
+      </div>
+    </header>
+
+    <section class="block">
+      <h3 class="block__t"><span class="q">01</span>Сильные стороны</h3>
+      <div class="rows">
+        <details class="row"><summary>Узнаваемая боль с конкретикой</summary><div class="row__b"><p>«Та же витрина, что на прошлой неделе», «продала два, может, три». Диагноз точный: ремесло есть, не хватает умения рассказать о себе. Владелец малого бизнеса узнаёт себя в первые 15 секунд.</p></div></details>
+        <details class="row"><summary>Интрига держит до раскрытия</summary><div class="row__b"><p>Незнакомец в шляпе и записки создают вопрос «кто это?». Ответ — Coursiv в телефоне на 1:05. Продукт показан как добрый наставник, а не сложная технология.</p></div></details>
+        <details class="row"><summary>Механика показана, а не описана</summary><div class="row__b"><p>Одно задание в день: сфотографируй букет, добавь синий чертополох, которого нет у соседей. Сразу за этим — результат: покупатель с улицы и запрос на оформление мероприятия.</p></div></details>
+        <details class="row"><summary>Возражения сняты до призыва</summary><div class="row__b"><p>«Я и так иногда пощу» → «постить без плана — как цветы в вазе без воды». «Нет времени» → 10 минут в день. «Сложно» → «не нужно понимать, почему это работает, просто не пропускай дни».</p></div></details>
+        <details class="row"><summary>Анимация и мягкий призыв</summary><div class="row__b"><p>Валяная анимация выделяется в ленте и снимает эффект «зловещей долины» у ИИ-людей. Призыв — пройти квиз и «начать завтра», порог входа минимальный.</p></div></details>
+      </div>
+    </section>
+
+    <section class="block">
+      <h3 class="block__t"><span class="q">02</span>Аудитория и рынок</h3>
+      <div class="tiles">
+        <div class="tile"><h4>Кто</h4><p>Женщины 28–50 лет: флористки, пекари, владелицы кофеен и салонов. Ремеслом владеют, маркетингом — нет.</p></div>
+        <div class="tile"><h4>Боль</h4><p>Товар хороший, но о нём не знают. Непонятно, что постить, нет времени, страшно, что технологии — это сложно.</p></div>
+        <div class="tile"><h4>Обещание</h4><p>Каждый день готовое задание: 1 фото, 1 текст, 10 минут.</p></div>
+        <div class="tile"><h4>Сегмент</h4><p>Commerce de proximité: локальный B2C-микробизнес, продвижение в Instagram и Facebook, холодная аудитория.</p></div>
+      </div>
+      <p class="note">Момент для рынка хороший: по барометру France Num 2025 ИИ используют больше четверти французских компаний, и доля удвоилась за год. Ролик обращается к тем, кто ещё не начал.</p>
+    </section>
+
+    <section class="block">
+      <h3 class="block__t"><span class="q">03</span>Насколько ложится под Францию</h3>
+      <div class="cols cols--2">
+        <div class="col col--keep">
+          <h4>Оставить</h4>
+          <div class="rows">
+            <details class="row"><summary>Сюжет в духе «Амели»</summary><div class="row__b"><p>Тайный доброжелатель, который меняет жизнь соседей маленькими знаками, — понятный французам культурный код. Записки от руки усиливают его.</p></div></details>
+            <details class="row"><summary>ИИ помогает, а не заменяет ремесло</summary><div class="row__b"><p>«Букеты я делаю сама, помощь нужна, чтобы рассказать». Это точно под французский скепсис: ИИ доверяют 33% французов против 46% в мире (KPMG, 2025).</p></div></details>
+            <details class="row"><summary>Визуальные коды</summary><div class="row__b"><p>Османовские фасады, брусчатка, деревянная витрина, тёплый утренний свет, лавка квартала.</p></div></details>
+            <details class="row"><summary>Тон и метафоры</summary><div class="row__b"><p>Мягкий, поэтичный тон и метафора «ваза без воды» из мира героини.</p></div></details>
+          </div>
+        </div>
+        <div class="col col--change">
+          <h4>Поменять</h4>
+          <div class="rows">
+            <details class="row"><summary>Английская заставка «AI MARKETING BOT»</summary><div class="row__b"><p>По закону Тубона рекламный текст во Франции должен быть на французском. Вариант: «Ton coach marketing IA». И лучше обещать результат, а не «бота».</p></div></details>
+            <details class="row"><summary>Ошибки во французских субтитрах</summary><div class="row__b"><p>Для французской аудитории это первый сигнал «машинный перевод».</p>
+              <ul class="fix">
+                <li><span class="t">0:51</span><s>du chaton bleu</s><b>du chardon bleu</b></li>
+                <li><span class="t">0:53</span><s>ce boquet</s><b>ce bouquet</b></li>
+                <li><span class="t">1:06</span><s>quelqu'un déporsait</s><b>quelqu'un déposait</b></li>
+                <li><span class="t">1:12</span><s>Je sais sûr que…</s><b>Ce que je sais, c'est que…</b></li>
+                <li><span class="t">1:53</span><s>au lieu de ce qu'elle est avant de dormir</s><b>au lieu de scroller avant de dormir</b></li>
+                <li><span class="t">весь ролик</span><s>5minutes, non?</s><b>5 minutes, non ?</b></li>
+              </ul></div></details>
+            <details class="row"><summary>Типаж героини</summary><div class="row__b"><p>Блондинка с пропорциями диснеевской принцессы читается как американский мультфильм. Лучше шатенка 30–40 лет, натуральная, чуть уставшая — как настоящая флористка из квартала.</p></div></details>
+            <details class="row"><summary>Незнакомец в плаще</summary><div class="row__b"><p>Мужчина, который каждое утро смотрит на женщину через витрину, может читаться как слежка. Лучше сделать помощника сказочным (тень, свет, бумажная птица) или сразу связать записки с уведомлениями в телефоне.</p></div></details>
+            <details class="row"><summary>ИИ-вывеска и хук</summary><div class="row__b"><p>Нечитаемая вывеска «HOURSAIH YOINNE» на 0:22 — заменить на настоящее название лавки. Начать с самой сильной фразы «J'en ai vendu deux. Peut-être trois.» и сократить ролик с 2:10 до 45–60 секунд.</p></div></details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- ============ CATERING ============ -->
+  <article class="panel" role="tabpanel" id="panel-catering" aria-labelledby="tab-catering" hidden>
+    <header class="cr">
+      <img class="cr__cover" src="assets/creative-catering.webp" alt="Кадр из ролика: Fatou на своей кухне" loading="lazy">
+      <div class="cr__text">
+        <p class="fit fit--low">США: идея подходит, исполнение нет</p>
+        <p class="cr__verdict">Ролик «для США» целиком на французском — американец его не поймёт. Но сюжет «ушла из офиса и доказала бывшему боссу» — американская мечта, и после локализации он может работать очень сильно.</p>
+        <ul class="chips"><li>4:08</li><li>9:16</li><li>Фотореалистичная генерация</li><li>Французская речь</li></ul>
+      </div>
+    </header>
+
+    <section class="block">
+      <h3 class="block__t"><span class="q">01</span>Сильные стороны</h3>
+      <div class="rows">
+        <details class="row"><summary>Конфликт с первой сцены</summary><div class="row__b"><p>Бывший начальник снисходительно зовёт назад, витрина пустая, холодильник полон еды для отменённой свадьбы. Героине есть что терять, и зритель хочет, чтобы она доказала обратное.</p></div></details>
+        <details class="row"><summary>Точная формулировка боли</summary><div class="row__b"><p>«Мои блюда хороши, кто пробует — возвращается. Но никто не пробует», «три лайка, один от мамы».</p></div></details>
+        <details class="row"><summary>Совет от равного</summary><div class="row__b"><p>Coursiv советует подруга из той же ниши, которая полгода назад была в том же состоянии. Это как сарафанное радио: доверия больше, чем к обещаниям бренда.</p></div></details>
+        <details class="row"><summary>Результат в картинке</summary><div class="row__b"><p>Очередь, отказы в заказах, «запись закрыта до полудня, кухня закрывается в 18:00». Обещание не только денег, но и свободного вечера.</p></div></details>
+        <details class="row"><summary>Уважение к опыту</summary><div class="row__b"><p>«Мой опыт остаётся со мной, я просто добавляю инструменты» и «постить без плана — как готовить без рецепта». Это снимает страх «ИИ — это не для меня».</p></div></details>
+        <details class="row"><summary>Редкая героиня в рекламе технологий</summary><div class="row__b"><p>Чернокожая женщина 50+ в роли предпринимателя — аудитория, которую такая реклама почти не показывает, поэтому ролик выделяется и вызывает доверие.</p></div></details>
+      </div>
+    </section>
+
+    <section class="block">
+      <h3 class="block__t"><span class="q">02</span>Аудитория и рынок США</h3>
+      <div class="tiles">
+        <div class="tile"><h4>Кто</h4><p>Женщины 35–60 лет с маленьким food-бизнесом: кейтеринг, meal prep, выпечка, фудтрак. Часто ушли с офисной работы или выросли из side hustle.</p></div>
+        <div class="tile"><h4>Боль</h4><p>Вкусно, но о тебе не знают. Нет системы в соцсетях и нет времени после 14-часового дня. Плюс страх: уход с работы — это потеря медстраховки.</p></div>
+        <div class="tile"><h4>Сегмент</h4><p>Solo- и микробизнес в еде: свадьбы, корпоративы, заказы на выходные. Instagram, Facebook-группы, Google Business Profile, Nextdoor.</p></div>
+        <div class="tile"><h4>Сильная ниша</h4><p>Бизнесы чернокожих женщин выросли на 13% против 4,4% у всех женских бизнесов (Wells Fargo, 2026).</p></div>
+      </div>
+      <div class="rows rows--tight">
+        <details class="row"><summary>Почему сейчас ролик не ложится на США</summary><div class="row__b"><p>Французский язык и дисклеймер, европейские интерьеры, французские реалии («la compta», «poste stable, des avantages»), 4 минуты хронометража и финал без заставки.</p></div></details>
+        <details class="row"><summary>Субтитры не вычитаны даже для Франции</summary><div class="row__b">
+          <ul class="fix">
+            <li><span class="t">0:15</span><s>la comtat</s><b>la compta</b></li>
+            <li><span class="t">0:22</span><s>poste tabale</s><b>poste stable</b></li>
+            <li><span class="t">0:48</span><s>mariard</s><b>mariage</b></li>
+            <li><span class="t">0:54</span><s>planànique</s><b>planning</b></li>
+            <li><span class="t">2:02</span><s>une taffe</s><b>une tâche</b></li>
+            <li><span class="t">3:32</span><s>vos journées sont langues</s><b>vos journées sont longues</b></li>
+          </ul></div></details>
+      </div>
+    </section>
+
+    <section class="block">
+      <h3 class="block__t"><span class="q">03</span>Что бы я поменяла</h3>
+      <div class="cols cols--3">
+        <div class="col col--keep">
+          <h4>Оставить</h4>
+          <div class="rows">
+            <details class="row"><summary>Драматургию</summary><div class="row__b"><p>Бывший босс → сомнение → совет подруги → очередь клиентов.</p></div></details>
+            <details class="row"><summary>Героиню 50+</summary><div class="row__b"><p>В США — афроамериканка или иммигрантка из Западной Африки, тогда имя Fatou остаётся.</p></div></details>
+            <details class="row"><summary>Сильные фразы и квиз</summary><div class="row__b"><p>«Никто не пробует», «готовить без рецепта», призыв пройти квиз.</p></div></details>
+          </div>
+        </div>
+        <div class="col col--boost">
+          <h4>Усилить</h4>
+          <div class="rows">
+            <details class="row"><summary>Хук в первые 2 секунды</summary><div class="row__b"><p>Начать с реплики босса «Thought I had the wrong address. This is yours?» или с холодильника с едой для отменённой свадьбы.</p></div></details>
+            <details class="row"><summary>Американские ставки</summary><div class="row__b"><p>«Бросила зарплату, 401(k) и медстраховку» — понятнее американцу, чем «стабильная должность».</p></div></details>
+            <details class="row"><summary>Продукт и результат на экране</summary><div class="row__b"><p>Показать задание дня в Coursiv, а результат — цифрой: «booked solid through June». Реалии: отзывы в Google, Nextdoor, graduation parties.</p></div></details>
+          </div>
+        </div>
+        <div class="col col--change">
+          <h4>Убрать</h4>
+          <div class="rows">
+            <details class="row"><summary>Французский язык</summary><div class="row__b"><p>Речь, субтитры и дисклеймер — на английском, живая американская речь: коротко и прямо.</p></div></details>
+            <details class="row"><summary>Длинный подкаст</summary><div class="row__b"><p>Он пересказывает уже показанную историю и занимает минуту. Оставить 10 секунд отзыва.</p></div></details>
+            <details class="row"><summary>Ляпы генерации</summary><div class="row__b"><p>Пищевые перчатки за ноутбуком и в студии подкаста, пустой экран ноутбука, пока звучит письмо, цветочный горшок на разделочном столе, ведущий подкаста похож на мужа героини.</p></div></details>
+            <details class="row"><summary>Финал без заставки</summary><div class="row__b"><p>Статичные 8 секунд в конце заменить заставкой с логотипом и «Tap to take the quiz».</p></div></details>
+          </div>
+        </div>
+      </div>
+      <div class="idea">
+        <h4>Американская версия в двух словах</h4>
+        <p>60–90 секунд и нарезки по 15 и 30. Арендованная кухня в Атланте или Хьюстоне. В финале бывший босс звонит уже как клиент — заказать кейтеринг для офиса, а она отвечает: «Ближайшее свободное окно — в июле».</p>
+      </div>
+    </section>
+  </article>
+
+  <p class="sources">Источники: <a href="https://kpmg.com/fr/fr/insights/risques-ia/confiance-ia-france.html" target="_blank" rel="noopener">KPMG, доверие к ИИ во Франции (2025)</a>, <a href="https://www.economie.gouv.fr/node/3237194" target="_blank" rel="noopener">France Num, барометр 2025</a>, <a href="https://www.culture.gouv.fr/fr/Media/Presse/Fichiers/2018/La-langue-francaise-dans-la-publicite" target="_blank" rel="noopener">Минкультуры Франции о языке в рекламе</a>, <a href="https://www.buyblack.org/articles/black-women-lead-entrepreneurial-growth-in-the-u-s-amid-challenges" target="_blank" rel="noopener">BuyBlack.org по данным Wells Fargo (2026)</a>.</p>
+</section>
+
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p><span class="me-name">Sabina Myltykbay</span> — тестовое задание на роль AI Creator, октябрь 2026.</p>
+    <p class="foot__contacts">Telegram: <a href="https://t.me/s_myltykbay" target="_blank" rel="noopener">@s_myltykbay</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
